@@ -1,0 +1,46 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  width: 100vw;
+  min-height: 100vh;
+  padding: 2.4rem;
+  background-color: #e2dff0;
+  .navBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    .leftNav {
+      width: 37%;
+    }
+    .rightNav {
+      width: 63%;
+      display: flex;
+      gap: 1.6rem;
+      padding: 0.6rem;
+      a {
+        padding: 0.7rem 1.6rem;
+        text-decoration: none;
+        background-color: rgb(245, 242, 241);
+        border-radius: 4px;
+        color: #44566c;
+        // font-size: 1.3rem;
+      }
+      .activePage {
+        background-color: #e12a71;
+        color: white;
+      }
+      .moonico {
+        border-radius: 3rem;
+        font-size: 2rem;
+        align-self: center;
+        align-items: center;
+        background-color: tomato;
+        padding: 0.5rem;
+      }
+    }
+  }
+}
