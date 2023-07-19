@@ -3,44 +3,87 @@
   margin: 0;
   box-sizing: border-box;
 }
+@import "/app/styles/about";
+@import "/app/styles/varibles";
+@import "/app/styles/resume";
+@import "/app/styles/blogs";
 body {
   width: 100vw;
   min-height: 100vh;
   padding: 2.4rem;
-  background-color: #e2dff0;
+  background: url("/images/bg.jpg");
+  background-size: 100%;
+  background-position: 100%;
+  @media (max-width: 768px) {
+    padding: 1rem;
+  }
   .navBar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
+    width: 98%;
+    position: relative;
     .leftNav {
       width: 37%;
+      @media (max-width: 768px) {
+        width: 50%;
+      }
     }
     .rightNav {
       width: 63%;
+      font-family: $popFont;
       display: flex;
       gap: 1.6rem;
       padding: 0.6rem;
+      @media (max-width: 768px) {
+        flex-direction: column;
+        position: absolute;
+        width: 100%;
+        background-color: red;
+        top: 4rem;
+        // display: none;
+      }
       a {
-        padding: 0.7rem 1.6rem;
+        width: auto;
+        padding: 0.7rem 1rem;
         text-decoration: none;
-        background-color: rgb(245, 242, 241);
+        background-color: #ffffff;
         border-radius: 4px;
         color: #44566c;
-        // font-size: 1.3rem;
+        font-size: 0.9rem;
+        font-weight: 500;
+        display: flex;
+        gap: 0.5rem;
+        align-items: center;
+        &:hover {
+          color: white;
+          background: linear-gradient(to right, #e02929, #f7585f);
+        }
+        .df {
+          display: flex;
+          align-items: center;
+          gap: 1rem;
+          .menuIcon {
+            font-size: 1.4rem;
+          }
+        }
+        .moonico {
+          font-size: 2rem;
+          background-color: red;
+        }
       }
       .activePage {
-        background-color: #e12a71;
+        background: linear-gradient(to right, #e02974, #f7585f);
         color: white;
       }
-      .moonico {
-        border-radius: 3rem;
-        font-size: 2rem;
-        align-self: center;
-        align-items: center;
-        background-color: tomato;
-        padding: 0.5rem;
-      }
+      // .moonico {
+      //   border-radius: 3rem;
+      //   font-size: 0.6rem;
+      //   align-self: center;
+      // }
+    }
+    .hamMenu {
+      font-size: 2rem;
     }
   }
   .homeHero {
@@ -50,20 +93,64 @@ body {
     justify-content: center;
     align-items: center;
     .card {
+      margin-top: 2rem;
       width: 30%;
       height: 80%;
+      padding: 1rem;
       // background-color: red;
       display: flex;
       flex-direction: column;
       align-items: center;
-
+      gap: 1.5rem;
       img {
         border-radius: 50%;
         width: 70%;
       }
+      .df {
+        display: flex;
+      }
+      .profile-details {
+        text-align: center;
+        p {
+          color: #84857e;
+        }
+      }
+
+      .socials {
+        display: flex;
+        gap: 2rem;
+        color: #1c9cea;
+
+        font-size: 2rem;
+        // background-color: rgb(206, 59, 59);
+        .socialIcon {
+          background-color: white;
+          padding: 0.5rem;
+          border-radius: 3px;
+        }
+        .pink {
+          color: #e34f84;
+        }
+        // FaFacebookF {
+        // }
+      }
       button {
-        padding: 1rem 3rem;
+        padding: 0.9rem 2.7rem;
+        border-radius: 2rem;
+        color: white;
+        border: none;
+        font-size: 1.2rem;
+        .downLdIcon {
+          font-size: 2rem;
+        }
+        background: linear-gradient(to right, #e02974, #f7585f);
+        &:hover {
+          background: linear-gradient(to right, #f7585f, #e02974);
+        }
       }
     }
   }
+  // .footer {
+  //   background-color: red;
+  // }
 }
